@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ThemeSample.Views.ProfilePage"
+             Title="{Binding Title}"
+             BackgroundColor="{DynamicResource PrimaryColor}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Edit" />
+        <ToolbarItem Text="Save" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="300" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Image Aspect="AspectFill" Source="monkey.jpg" />
+                    <Grid BackgroundColor="{DynamicResource TransperantBackgroundColor}">
+                        <Label
+                            Margin="15"
+                            FontSize="Title"
+                            Style="{StaticResource OverlayTitleLabelStyle}"
+                            VerticalOptions="End">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Preetanshu" />
+                                    <Span Text="&#x0a;" />
+                                    <Span Text="Mishra" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </Grid>
+                </Grid>
+                <Grid
+                    Grid.Row="1"
+                    Margin="0,-6,0,0"
+                    VerticalOptions="Start">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="1" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="1" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="1" />
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="1" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <BoxView
+                        Grid.Row="0"
+                        Grid.ColumnSpan="5"
+                        Style="{StaticResource HorizontalSeparatorLineStyle}" />
+                    <BoxView
+                        Grid.Row="2"
+                        Grid.ColumnSpan="5"
+                        Style="{StaticResource HorizontalSeparatorLineStyle}" />
+                    <BoxView
+                        Grid.Row="4"
+                        Grid.ColumnSpan="5"
+                        Style="{StaticResource HorizontalSeparatorLineStyle}" />
+                    <BoxView
+                        Grid.RowSpan="5"
+                        Grid.Column="1"
+                        Style="{StaticResource VerticalSeparatorLineStyle}" />
+                    <BoxView
+                        Grid.RowSpan="5"
+                        Grid.Column="3"
+                        Style="{StaticResource VerticalSeparatorLineStyle}" />
+
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Margin="15"
+                        VerticalOptions="Start">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Style="{StaticResource BigLabelStyle}" Text="30" />
+                                <Span Style="{StaticResource SubLabelStyle}" Text=" years" />
+                                <Span Text="&#x0a;" />
+                                <Span Style="{StaticResource SubLabelStyle}" Text="Age" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Margin="15"
+                        VerticalOptions="Start">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Style="{StaticResource BigLabelStyle}" Text="B" />
+                                <Span Text="&#x0a;" />
+                                <Span Style="{StaticResource SubLabelStyle}" Text="Blood Group" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="4"
+                        Margin="15"
+                        VerticalOptions="Start">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Style="{StaticResource BigLabelStyle}" Text="24" />
+                                <Span Text="&#x0a;" />
+                                <Span Style="{StaticResource SubLabelStyle}" Text="BMI" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label
+                        Grid.Row="3"
+                        Grid.Column="0"
+                        Margin="15"
+                        VerticalOptions="Start">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Style="{StaticResource BigLabelStyle}" Text="178" />
+                                <Span Style="{StaticResource SubLabelStyle}" Text=" cm" />
+                                <Span Text="&#x0a;" />
+                                <Span Style="{StaticResource SubLabelStyle}" Text="Height" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label
+                        Grid.Row="3"
+                        Grid.Column="2"
+                        Margin="15"
+                        VerticalOptions="Start">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Style="{StaticResource BigLabelStyle}" Text="83" />
+                                <Span Style="{StaticResource SubLabelStyle}" Text=" kg" />
+                                <Span Text="&#x0a;" />
+                                <Span Style="{StaticResource SubLabelStyle}" Text="Weight" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label
+                        Grid.Row="3"
+                        Grid.Column="4"
+                        Margin="15"
+                        VerticalOptions="Start">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Style="{StaticResource BigLabelStyle}" Text="40" />
+                                <Span Style="{StaticResource SubLabelStyle}" Text=" %" />
+                                <Span Text="&#x0a;" />
+                                <Span Style="{StaticResource SubLabelStyle}" Text="Fat" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </Grid>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

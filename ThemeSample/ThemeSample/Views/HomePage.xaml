@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true"
+             x:Class="ThemeSample.Views.HomePage"
+             Title="{Binding Title}"
+             BackgroundColor="{DynamicResource PageBackgroundColor}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Command="{Binding ThemeSelectionPageCommand}"
+            Text="Theme" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="70" />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid Padding="20" BackgroundColor="{DynamicResource PrimaryColor}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Label
+                            Grid.Column="0"
+                            FontSize="Title"
+                            VerticalOptions="Center">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Welcome to Xamarin Themes Sample" TextColor="{DynamicResource PrimaryTintColor}" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Frame
+                            Grid.Column="1"
+                            CornerRadius="50"
+                            HasShadow="False"
+                            HeightRequest="60"
+                            HorizontalOptions="End"
+                            IsClippedToBounds="True"
+                            VerticalOptions="End"
+                            WidthRequest="60">
+                            <Image
+                                Margin="-40"
+                                HeightRequest="100"
+                                Source="monkeyprofile.jpg"
+                                WidthRequest="100">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding GoToProfilePageCommand}" NumberOfTapsRequired="1" />
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </Frame>
+                    </Grid>
+
+                </Grid>
+                <Grid
+                    Grid.Row="1"
+                    Margin="0,-6,0,0"
+                    VerticalOptions="Start">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="1" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="1" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="1" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <BoxView
+                        Grid.Row="0"
+                        Grid.ColumnSpan="3"
+                        Style="{StaticResource HorizontalSeparatorLineStyle}" />
+                    <BoxView
+                        Grid.Row="2"
+                        Grid.ColumnSpan="3"
+                        Style="{StaticResource HorizontalSeparatorLineStyle}" />
+                    <BoxView
+                        Grid.Row="4"
+                        Grid.ColumnSpan="3"
+                        Style="{StaticResource HorizontalSeparatorLineStyle}" />
+                    <BoxView
+                        Grid.RowSpan="5"
+                        Grid.Column="1"
+                        Style="{StaticResource VerticalSeparatorLineStyle}" />
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Margin="25"
+                        VerticalOptions="Start">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Style="{StaticResource BigLabelStyle}" Text="36.75" />
+                                <Span Style="{StaticResource SubLabelStyle}" Text=" &#186;C" />
+                                <Span Text="&#x0a;" />
+                                <Span Style="{StaticResource SubLabelStyle}" Text="Temperature" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Margin="25"
+                        VerticalOptions="Start">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Style="{StaticResource BigLabelStyle}" Text="560" />
+                                <Span Style="{StaticResource SubLabelStyle}" Text=" cal" />
+                                <Span Text="&#x0a;" />
+                                <Span Style="{StaticResource SubLabelStyle}" Text="Calories burned" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label
+                        Grid.Row="3"
+                        Grid.Column="0"
+                        Margin="25"
+                        VerticalOptions="Start">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Style="{StaticResource BigLabelStyle}" Text="3350" />
+                                <Span Text="&#x0a;" />
+                                <Span Style="{StaticResource SubLabelStyle}" Text="Steps" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label
+                        Grid.Row="3"
+                        Grid.Column="2"
+                        Margin="25"
+                        VerticalOptions="Start">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Style="{StaticResource BigLabelStyle}" Text="87" />
+                                <Span Style="{StaticResource SubLabelStyle}" Text=" bpm" />
+                                <Span Text="&#x0a;" />
+                                <Span Style="{StaticResource SubLabelStyle}" Text="Heart rate" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </Grid>
+                <Button
+                    Grid.Row="2"
+                    Command="{Binding GoToProfilePageCommand}"
+                    HorizontalOptions="Center"
+                    Style="{StaticResource PrimaryButtonStyle}"
+                    Text="Profile"
+                    VerticalOptions="Center" />
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
