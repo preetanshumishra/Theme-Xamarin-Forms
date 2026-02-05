@@ -32,3 +32,12 @@
 *.mp3 binary
 *.gz binary
 *.zip binary
+
+# GitHub language detection
+bin/** linguist-vendored linguist-generated
+obj/** linguist-vendored linguist-generated
+.nuget/** linguist-vendored
+packages/** linguist-vendored
+Pods/** linguist-vendored linguist-generated
+.gradle/** linguist-vendored linguist-generated
+build/** linguist-vendored linguist-generated
